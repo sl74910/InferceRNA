@@ -1,0 +1,20 @@
+Package: InferceRNA
+Title: Calculation of PMI and Correlation for RNA-Seq Data Analysis
+Version: 0.0.0.9000
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+biocViews:
+Imports: Informeasure, magrittr, parallel
+Depends: R (>= 4.1.0)
+LazyData: true
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+Author: First Last [aut, cre] (YOUR-ORCID-ID)
+Maintainer: First Last <first.last@example.com>
+Built: R 4.3.1; ; 2023-09-15 11:15:26 UTC; windows

@@ -1,0 +1,8 @@
+calcPMIAndCorr          Calculating PMI and correlation.
+calculatePMICorrDF      A scoring function for lncRNA-miRNA-mRNA based
+                        on correlation and information measures.
+calculatePMICorrDF1     A scoring function for lncRNA-miRNA-mRNA based
+                        on correlation and information measures.
+calculatePMICorrDF2     A scoring function for lncRNA-miRNA-mRNA based
+                        on correlation and information measures.
+checkceRNA_inputs       Check the input data of ceRNA analysis
