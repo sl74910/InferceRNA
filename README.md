@@ -28,3 +28,30 @@ inferCERNA <- checkceRNA_inputs(
     mRNAexpression_normal = PTENceRNA$ceRNA2_normal,
     threshold = 0.5
 )
+## `calcPMIAndCorr()`
+
+Calculating PMI and correlation. This function calculates the Pointwise Mutual Information (PMI) and correlation between a lncRNA, miRNA, and mRNA based on their expression data and differential expression analysis results. The function takes as input the names of the lncRNA, miRNA, and mRNA, along with their expression data in tumor and normal tissues. The returned vector contains key information about the interactions between lncRNA, miRNA, and mRNA, including their names, fold change values from differential expression analysis, Pearson correlation coefficient, as well as PMI and information interaction measure computed based on expression data.
+
+```r
+library(InferceRNA)
+data("PTENceRNA")
+
+# The function depends on calculatePMICorrDF1 and calculatePMICorrDF2 for optimizing the Windows and Linux systems respectively.
+
+result <- calcPMIAndCorr(
+    lncRNA = "PTENP1",
+    miRNA = "hsa-miR-582-3p",
+    mRNA = "PTEN",
+    inferCERNA = PTENceRNA,
+    DElncRNA, 
+    DEmRNA
+)
+
+# colnames = (lncRNA, miRNA, mRNA,
+#             DElncRNA$log2FoldChange[DElncRNAindex],
+#             DEmRNA$log2FoldChange[DEmRNAindex], 
+#             PearsonCC, PMI.normal, PMI.tumor, absdiffPMI, diffCMIMI)
+# [1] "PTENP1"             "hsa-let-7a-5p"      "PTEN"               
+# [4] "-0.508686920560346" "-0.439408139255671" "0.781228077121531"  
+# [7] "0.674431171109052"  "0.920363630693052"  "0.245932459584"     
+# [10] "0.353907540952865"
